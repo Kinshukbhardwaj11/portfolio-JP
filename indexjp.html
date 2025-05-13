@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berry Dev ポートフォリオ</title>
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Cookie&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Berry Sprinkles Container -->
+  <div id="berries-container"></div>
+  
+  <!-- Header/Hero Section -->
+  <header class="hero" id="home">
+    <div class="frosting-drip"></div>
+    <div class="pulse-circle" style="width: 16rem; height: 16rem; top: 25%; right: 25%;"></div>
+    <div class="pulse-circle" style="width: 24rem; height: 24rem; bottom: 25%; left: 33%; animation-delay: 1s;"></div>
+    
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <span class="logo-icon">🍰</span>
+          Kinshuk<span>Bhardwaj</span>
+        </div>
+        <div class="nav-links">
+          <a href="#about">プロフィール</a>
+          <a href="#skills">スキル</a>
+          <a href="#projects">プロジェクト</a>
+          <a href="#journey">経歴</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-menu-open">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <a href="#about">プロフィール</a>
+        <a href="#skills">スキル</a>
+        <a href="#projects">プロジェクト</a>
+        <a href="#journey">経歴</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+      
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            <span class="text-highlight">美味しい</span><br/>
+            コードと<br/>
+            <span class="text-highlight">甘いソリューション</span>
+          </h1>
+          <p class="text-xl">
+            AIの魔法を加えて、滑らかなデジタル体験を作るフルスタック開発者。
+          </p>
+          <div class="button-group">
+            <a href="#projects" class="cake-button">
+              <span>プロジェクトを見る</span>
+              <i class="fas fa-birthday-cake"></i>
+            </a>
+            <a href="#contact" class="outline-button">
+              <i class="fas fa-envelope"></i>
+              お問い合わせ
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-container">
+            <img src="./assets/profile.png" alt="プロフィール" class="profile-pic" />
+            
+            <!-- Floating tech icons with pastry theme -->
+            <div class="tech-icon floating" style="animation-delay: 0s;">
+              <i class="fab fa-react" style="color: #61DAFB;"></i>
+            </div>
+            <div class="tech-icon floating" style="animation-delay: 0.5s;">
+              <i class="fab fa-python" style="color: #3776AB;"></i>
+            </div>
+            <div class="tech-icon floating" style="animation-delay: 1s;">
+              <i class="fas fa-brain" style="color: #9C27B0;"></i>
+            </div>
+            <div class="tech-icon floating" style="animation-delay: 1.5s;">
+              <i class="fab fa-node-js" style="color: #339933;"></i>
+            </div>
+            <div class="tech-icon floating" style="animation-delay: 2s;">
+              <i class="fas fa-database" style="color: #F29111;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Floating berry and pastry icons -->
+    <div class="berry-icon floating" style="position: absolute; top: 5rem; left: 5rem; font-size: 3rem; animation-delay: 0.2s;">🍓</div>
+    <div class="berry-icon floating" style="position: absolute; top: 33%; right: 5rem; font-size: 2.5rem; animation-delay: 1.2s;">🧁</div>
+    <div class="berry-icon floating" style="position: absolute; bottom: 10rem; left: 25%; font-size: 3rem; animation-delay: 0.7s;">🫐</div>
+    <div class="berry-icon floating" style="position: absolute; bottom: 5rem; right: 5rem; font-size: 3.5rem; animation-delay: 1.7s;">🍩</div>
+    <div class="berry-icon floating" style="position: absolute; top: 15rem; right: 25%; font-size: 2.8rem; animation-delay: 1.5s;">🥧</div>
+    
+    <!-- Cream drip divider -->
+    <div class="cream-drip-container">
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+      <div class="cream-drip"></div>
+    </div>
+  </header>
+
+  <!-- About Section - Preserved from original with enhanced animations -->
+  <section id="about" class="about">
+    <div class="about-sprinkles">
+      <span class="sprinkle" style="top: 10%; left: 5%; animation-delay: 0.2s;"></span>
+      <span class="sprinkle" style="top: 15%; right: 10%; animation-delay: 0.5s;"></span>
+      <span class="sprinkle" style="top: 40%; left: 8%; animation-delay: 0.7s;"></span>
+      <span class="sprinkle" style="bottom: 20%; right: 5%; animation-delay: 1s;"></span>
+      <span class="sprinkle" style="bottom: 30%; left: 15%; animation-delay: 1.3s;"></span>
+    </div>
+    
+    <div class="container">
+      <h2>プロフィール</h2>
+      <div class="about-container">
+        <div class="about-text">
+          <h3>こんにちは、キンシュクです！</h3>
+          <p>
+            インド工科大学マドラス校で海洋工学の学士号と、MBAファイナンスを取得したエンジニアです。現在はAI駆動の予測保全、データサイエンス、そしてフルスタック開発を専門としています。
+            現在は、生の産業データをクリーンで直感的なインターフェースを通じて実用的な洞察に変換するインテリジェントシステムを構築しています。
+          </p>
+          <p>
+            フルスタックアプリケーションの構築、インテリジェントシステムの設計、ビジネスワークフローの分析、またはユーザー中心のツールの作成など、あらゆるプロジェクトに技術的な精度と創造的な洞察のバランスをもたらします。
+          </p>
+          <p>
+            コーディングをしていない時は、オープンソースプロジェクトへの貢献、研究論文の読書、
+            新しい技術の探索、または日本語（現在JLPT N4）と中国語（TOCFL A1）の学習をしています。
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="role-card-container">
+            <!-- Small decorative berries -->
+            <span class="berry-decoration">🍓</span>
+            <span class="berry-decoration">🧁</span>
+            <span class="berry-decoration">🍩</span>
+            
+            <div class="role-cards">
+              <div class="role-card card-hover">
+                <div class="role-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h4 class="role-title">フルスタック開発者</h4>
+                <p class="role-description">シームレスで応答性の高いWebアプリケーションの作成</p>
+              </div>
+              <div class="role-card card-hover">
+                <div class="role-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <h4 class="role-title">AIエンジニア</h4>
+                <p class="role-description">学習し適応するインテリジェントシステムの構築</p>
+              </div>
+              <div class="role-card card-hover">
+                <div class="role-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h4 class="role-title">データサイエンティスト</h4>
+                <p class="role-description">複雑なデータセットから洞察を抽出</p>
+              </div>
+              <div class="role-card card-hover">
+                <div class="role-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h4 class="role-title">イノベーション重視</h4>
+                <p class="role-description">可能性の境界を押し広げる</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chocolate drip divider -->
+    <div class="chocolate-drip-container">
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+      <div class="chocolate-drip"></div>
+    </div>
+  </section>
+
+  <!-- Skills Section with bakery theme -->
+  <section id="skills" class="skills">
+    <div class="skills-decoration">
+      <div class="floating-icon" style="top: 15%; left: 5%; animation-delay: 0.2s;">🥄</div>
+      <div class="floating-icon" style="top: 20%; right: 5%; animation-delay: 0.7s;">🧁</div>
+      <div class="floating-icon" style="bottom: 15%; left: 8%; animation-delay: 1.2s;">🍫</div>
+      <div class="floating-icon" style="bottom: 25%; right: 10%; animation-delay: 1.5s;">🍰</div>
+    </div>
+    
+    <div class="container">
+      <h2>技術スキル</h2>
+      <p class="section-subtitle">成功のためのレシピには、これらの重要な材料が含まれています</p>
+      
+      <div class="skills-container">
+        <!-- Decorative elements -->
+        <span class="berry-icon floating" style="position: absolute; top: 1.25rem; right: 1.25rem; font-size: 2.5rem; animation-delay: 0.3s;">🍓</span>
+        <span class="berry-icon floating" style="position: absolute; bottom: 1.25rem; left: 1.25rem; font-size: 2.5rem; animation-delay: 1.5s;">🫐</span>
+        
+        <div class="skills-grid">
+          <!-- Frontend Skills -->
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="category-title">フロントエンド</h3>
+            <div class="tech-logo-grid">
+              <div class="tech-logo-item" data-delay="0">
+                <div class="tech-logo">
+                  <i class="fab fa-react" style="color: #61DAFB;"></i>
+                </div>
+                <div class="tech-name">React/Next.js</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.1">
+                <div class="tech-logo">
+                  <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                </div>
+                <div class="tech-name">JavaScript</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.2">
+                <div class="tech-logo">
+                  <i class="fab fa-html5" style="color: #E34F26;"></i>
+                </div>
+                <div class="tech-name">HTML5</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.3">
+                <div class="tech-logo">
+                  <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                </div>
+                <div class="tech-name">CSS3</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.4">
+                <div class="tech-logo">
+                  <i class="fab fa-sass" style="color: #CC6699;"></i>
+                </div>
+                <div class="tech-name">Sass</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.5">
+                <div class="tech-logo">
+                  <i class="fab fa-figma" style="color: #F24E1E;"></i>
+                </div>
+                <div class="tech-name">Figma</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Backend Skills -->
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="category-title">バックエンド</h3>
+            <div class="tech-logo-grid">
+              <div class="tech-logo-item" data-delay="0.1">
+                <div class="tech-logo">
+                  <i class="fab fa-python" style="color: #3776AB;"></i>
+                </div>
+                <div class="tech-name">Python</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.2">
+                <div class="tech-logo">
+                  <i class="fab fa-node-js" style="color: #339933;"></i>
+                </div>
+                <div class="tech-name">Node.js</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.3">
+                <div class="tech-logo">
+                  <i class="fas fa-database" style="color: #F29111;"></i>
+                </div>
+                <div class="tech-name">SQL/NoSQL</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.4">
+                <div class="tech-logo">
+                  <i class="fas fa-server" style="color: #FF4081;"></i>
+                </div>
+                <div class="tech-name">Express</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.5">
+                <div class="tech-logo">
+                  <i class="fas fa-code-branch" style="color: #E535AB;"></i>
+                </div>
+                <div class="tech-name">GraphQL</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.6">
+                <div class="tech-logo">
+                  <i class="fab fa-aws" style="color: #FF9900;"></i>
+                </div>
+                <div class="tech-name">AWS</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- AI/ML Skills -->
+          <div class="skill-category">
+            <div class="category-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="category-title">AI & ML</h3>
+            <div class="tech-logo-grid">
+              <div class="tech-logo-item" data-delay="0.2">
+                <div class="tech-logo">
+                  <i class="fab fa-python" style="color: #FF6F00;"></i>
+                </div>
+                <div class="tech-name">TensorFlow</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.3">
+                <div class="tech-logo">
+                  <i class="fas fa-fire" style="color: #EE4C2C;"></i>
+                </div>
+                <div class="tech-name">PyTorch</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.4">
+                <div class="tech-logo">
+                  <i class="fas fa-comment-alt" style="color: #9C27B0;"></i>
+                </div>
+                <div class="tech-name">NLP</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.5">
+                <div class="tech-logo">
+                  <i class="fas fa-eye" style="color: #00ACC1;"></i>
+                </div>
+                <div class="tech-name">コンピュータビジョン</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.6">
+                <div class="tech-logo">
+                  <i class="fas fa-chart-bar" style="color: #4CAF50;"></i>
+                </div>
+                <div class="tech-name">データサイエンス</div>
+              </div>
+              <div class="tech-logo-item" data-delay="0.7">
+                <div class="tech-logo">
+                  <i class="fas fa-brain" style="color: #FF4081;"></i>
+                </div>
+                <div class="tech-name">LLMファインチューニング</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Strawberry cream divider -->
+    <div class="strawberry-cream-container">
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+      <div class="strawberry-cream-drip"></div>
+    </div>
+  </section>
+
+  <!-- Projects Section with Recipe Cards -->
+  <section id="projects" class="projects">
+    <div class="projects-decoration">
+      <div class="floating-icon" style="top: 10%; right: 8%; animation-delay: 0.3s;">🧁</div>
+      <div class="floating-icon" style="bottom: 20%; left: 5%; animation-delay: 0.8s;">🍨</div>
+    </div>
+    
+    <div class="container">
+      <h2>スイートプロジェクト</h2>
+      <p class="section-subtitle">複雑さの層を持つおいしく作られたアプリケーション</p>
+      
+      <!-- Project Carousel -->
+      <div class="project-carousel-container">
+        <div class="carousel-nav">
+          <button id="prevProject" class="carousel-button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          
+          <button id="nextProject" class="carousel-button">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      
+        <div class="project-carousel" id="project-carousel">
+          <!-- Project Recipe Cards -->
+          <div class="project-card recipe-card card-hover">
+            <div class="recipe-card-top">
+              <div class="recipe-serving">フルスタック</div>
+              <div class="recipe-time"><i class="fas fa-clock"></i> 3ヶ月</div>
+            </div>
+            <div class="project-image">
+              <img src="./assets/recipie.png" alt="AIチャットボット" />
+              <div class="project-berry">🍓</div>
+            </div>
+            <div class="recipe-content">
+              <h3 class="project-title">ベリーインテリジェントチャットボット</h3>
+              <div class="recipe-ingredients">
+                <span class="ingredient-tag">React</span>
+                <span class="ingredient-tag">Python</span>
+                <span class="ingredient-tag">GPT-4</span>
+                <span class="ingredient-tag">Flask</span>
+              </div>
+              <p class="project-description">
+                自然言語処理でユーザーがレシピと料理のインスピレーションを見つけるのを支援するコンテキスト対応型AIアシスタント。
+              </p>
+              <div class="recipe-actions">
+                <a href="#" class="view-recipe">プロジェクトを見る <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card recipe-card card-hover">
+            <div class="recipe-card-top">
+              <div class="recipe-serving">Eコマース</div>
+              <div class="recipe-time"><i class="fas fa-clock"></i> 6ヶ月</div>
+            </div>
+            <div class="project-image">
+              <img src="./assets/shop.png" alt="Eコマースプラットフォーム" />
+              <div class="project-berry">🫐</div>
+            </div>
+            <div class="recipe-content">
+              <h3 class="project-title">ブルーベリーショップ</h3>
+              <div class="recipe-ingredients">
+                <span class="ingredient-tag">Next.js</span>
+                <span class="ingredient-tag">Node.js</span>
+                <span class="ingredient-tag">MongoDB</span>
+                <span class="ingredient-tag">Stripe</span>
+              </div>
+              <p class="project-description">
+                リアルタイム在庫管理、安全な決済、およびAI駆動の商品推奨機能を備えた完全機能のEコマースプラットフォーム。
+              </p>
+              <div class="recipe-actions">
+                <a href="https://kinshukbhardwaj11.github.io/ecommerce-landing-page/" class="view-recipe">プロジェクトを見る <i class="fas fa-arrow-right"></i></a>
+                <a href="https://github.com/Kinshukbhardwaj11/ecommerce-landing-page" class="github-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card recipe-card card-hover">
+            <div class="recipe-card-top">
+              <div class="recipe-serving">コンピュータビジョン</div>
+              <div class="recipe-time"><i class="fas fa-clock"></i> 4ヶ月</div>
+            </div>
+            <div class="project-image">
+              <img src="./assets/CV.png" alt="コンピュータビジョンアプリ" />
+              <div class="project-berry">🍒</div>
+            </div>
+            <div class="recipe-content">
+              <h3 class="project-title">チェリービジョン</h3>
+              <div class="recipe-ingredients">
+                <span class="ingredient-tag">PyTorch</span>
+                <span class="ingredient-tag">React Native</span>
+                <span class="ingredient-tag">TensorFlow</span>
+                <span class="ingredient-tag">AWS</span>
+              </div>
+              <p class="project-description">
+                コンピュータビジョンを使用して植物を識別し、お手入れ方法と成長追跡を提供するモバイルアプリ。
+              </p>
+              <div class="recipe-actions">
+                <a href="#" class="view-recipe">プロジェクトを見る <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card recipe-card card-hover">
+            <div class="recipe-card-top">
+              <div class="recipe-serving">データ可視化</div>
+              <div class="recipe-time"><i class="fas fa-clock"></i> 3ヶ月</div>
+            </div>
+            <div class="project-image">
+              <img src="./assets/dash.png" alt="データダッシュボード" />
+              <div class="project-berry">🍇</div>
+            </div>
+            <div class="recipe-content">
+              <h3 class="project-title">グレープアナリティクス</h3>
+              <div class="recipe-ingredients">
+                <span class="ingredient-tag">D3.js</span>
+                <span class="ingredient-tag">Vue.js</span>
+                <span class="ingredient-tag">Python</span>
+                <span class="ingredient-tag">FastAPI</span>
+              </div>
+              <p class="project-description">
+                ビジネスインテリジェンスと意思決定のための予測分析を備えたインタラクティブなデータ可視化ダッシュボード。
+              </p>
+              <div class="recipe-actions">
+                <a href="#" class="view-recipe">プロジェクトを見る <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel Indicators -->
+        <div id="project-indicators" class="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+      
+      <!-- Featured Project -->
+      <div class="featured-project">
+        <div class="featured-content">
+          <div class="featured-label">
+            <i class="fas fa-star"></i> おすすめプロジェクト
+          </div>
+          <h3>ベリースマートホーム</h3>
+          <p>
+            スマートホームデバイスをAIでインテリジェントな自動化、
+            エネルギー最適化、およびホームセキュリティ強化のために統合する包括的なIoTプラットフォーム。
+            ユーザーの習慣から学習し、最大の快適さと効率性のためにホーム環境を適応させる機械学習を活用しています。
+          </p>
+          <div class="tech-stack">
+            <span>React</span>
+            <span>TensorFlow</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>Raspberry Pi</span>
+            <span>MQTT</span>
+          </div>
+          <div class="button-group">
+            <a href="#" class="cake-button">
+              <span>ケーススタディを見る</span>
+              <i class="fas fa-birthday-cake"></i>
+            </a>
+            <a href="#" class="outline-button">
+              <i class="fab fa-github"></i> リポジトリ
+            </a>
+          </div>
+        </div>
+        <div class="featured-image">
+          <img src="./assets/home.png" alt="スマートホームプロジェクト" />
+          <!-- Floating icons -->
+          <div class="tech-icon floating" style="top: 10%; left: 10%; animation-delay: 0.2s;">
+            <i class="fas fa-home" style="color: #FF4081;"></i>
+          </div>
+          <div class="tech-icon floating" style="top: 20%; right: 10%; animation-delay: 0.7s;">
+            <i class="fas fa-lightbulb" style="color: #FFC107;"></i>
+          </div>
+          <div class="tech-icon floating" style="bottom: 20%; left: 15%; animation-delay: 1.2s;">
+            <i class="fas fa-lock" style="color: #4CAF50;"></i>
+          </div>
+          <div class="berry-icon floating" style="bottom: 10%; right: 15%; font-size: 2rem; animation-delay: 1.7s;">🍓</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Blueberry drip divider -->
+    <div class="blueberry-drip-container">
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+      <div class="blueberry-drip"></div>
+    </div>
+  </section>
+
+  <!-- Journey/Resume Section -->
+  <section id="journey" class="journey">
+    <div class="wave-divider-top cream">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    
+    <div class="container">
+      <h2>プロフェッショナルの道のり</h2>
+      <p class="section-subtitle">成長とイノベーションの甘い道</p>
+      
+      <!-- Timeline -->
+      <div class="timeline-container">
+        <div class="timeline-berry" style="left: -2rem; top: 2rem;">🍓</div>
+        <div class="timeline-berry" style="right: -2rem; top: 15rem;">🫐</div>
+        <div class="timeline-berry" style="left: -2rem; bottom: 10rem;">🍒</div>
+        <div class="timeline-berry" style="right: -2rem; bottom: 2rem;">🍇</div>
+        
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="timeline-date">2024年 - 現在</div>
+            <div class="timeline-content card-hover">
+              <h3>工業・機能アナリスト</h3>
+              <h4>アクセンチュア戦略・コンサルティング</h4>
+              <ul>
+                <li>AI駆動の資産健全性モデルを開発し、ダウンタイムを30％削減、メンテナンスコストを25％削減</li>
+                <li>予測保全、品質保証、生産計画のための統合パイプラインを構築し、運用効率を35％向上</li>
+                <li>リアルタイムの異常検出とRUL検出モデルを実装し、故障予測精度を40％向上</li>
+                <li>商用利用のためのフルスタックWebアプリケーションを作成・展開</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>TensorFlow</span>
+                <span>PyTorch</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Django</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="timeline-date">2024年</div>
+            <div class="timeline-content card-hover">
+              <h3>データ＆AIインターン</h3>
+              <h4>アクセンチュア戦略・コンサルティング</h4>
+              <ul>
+                <li>45人以上のインターン中「ベストインターン」の称号を獲得</li>
+                <li>MIPを使用して最適化モデルを開発し、メタヒューリスティックと比較してメイクスパンを16.8％削減</li>
+                <li>シミュレーションモデリングにSimioを活用し、システム分析と意思決定効率を25％向上</li>
+                <li>Simioデジタルツインを使用した製造のためのシナリオ計画により、財務損失を25％削減</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Google OR Tools</span>
+                <span>Python</span>
+                <span>Simio</span>
+                <span>Streamlit</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Experience 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="timeline-date">2024年</div>
+            <div class="timeline-content card-hover">
+              <h3>MLインターン</h3>
+              <h4>FedEXインド</h4>
+              <ul>
+                <li>高度なMLパイプラインを設計・展開し、カスタマーサービスの応答時間を30％短縮</li>
+                <li>日々500件以上のリクエストの標準化と分類を自動化し、クエリ処理を革新</li>
+                <li>堅牢なSQLフレームワークで運用の透明性を向上させ、4部門間の相乗効果を高める</li>
+                <li>非技術的なステークホルダーに技術的な調査結果を紹介</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
+           <!-- Education pt2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-date">2023年 - 2025年</div>
+            <div class="timeline-content card-hover">
+              <h3>MBA、ファイナンス</h3>
+              <h4>インド工科大学、マドラス</h4>
+              <p>ファイナンスのMBA中に、財務分析、戦略的管理、データ駆動の意思決定の強固な基盤を築きました。<br> 
+                <u>学業優秀さで学年で最高のCGPAを獲得しました。</u> 
+                <br>私の仕事は実世界のビジネス課題に焦点を当て、企業財務、リスク評価、市場調査、および運用戦略において主要なスキルを持ち、すべて鋭い分析的かつ協力的なマインドセットによって支えられています。</p>
+              <div class="timeline-tech">
+                <span>オペレーションズリサーチ</span>
+                <span>財務分析</span>
+                <span>数理最適化</span>
+              </div>
+            </div>
+          </div>         
+          <!-- Education -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-date">2020年 - 2024年</div>
+            <div class="timeline-content card-hover">
+              <h3>学士（工学）海洋工学</h3>
+              <h4>インド工科大学、マドラス</h4>
+              <p>モビリティ支援システム、海洋波浪水槽シミュレーション、船舶設計、沖合建築など、多様な領域で働きました。最終年プロジェクトでは、物理学情報ニューラルネットワーク（PINN）を開発してナビエ・ストークス方程式の解を推定し、流体力学とディープラーニングを組み合わせました。</p>
+              <div class="timeline-tech">
+                <span>AI研究</span>
+                <span>データ構造</span>
+                <span>アルゴリズム設計</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Resume Download -->
+      <div class="resume-download">
+        <div class="resume-download-content">
+          <h3>私の経験の完全なレシピが欲しいですか？</h3>
+          <p>私のスキル、経験、教育背景の詳細を見るために、完全な履歴書をダウンロードしてください。</p>
+          <a href="./assets/Kinshuk_Bhardwaj_Resume.pdf" target="_blank" class="cake-button">
+            <i class="fas fa-download"></i>
+            <span>履歴書をダウンロード</span>
+          </a>
+        </div>
+        <div class="resume-decoration">
+          <div class="berry-icon floating" style="top: 20%; left: 20%; font-size: 3rem; animation-delay: 0.3s;">🍓</div>
+          <div class="berry-icon floating" style="top: 60%; right: 20%; font-size: 2.5rem; animation-delay: 1.1s;">🫐</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Vanilla cream divider -->
+    <div class="vanilla-drip-container">
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+      <div class="vanilla-drip"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section with bakery theme -->
+  <section id="contact" class="contact">
+    <div class="contact-decoration">
+      <div class="floating-icon" style="top: 10%; right: 5%; animation-delay: 0.3s;">🧁</div>
+      <div class="floating-icon" style="bottom: 20%; left: 8%; animation-delay: 0.9s;">🍦</div>
+    </div>
+    
+    <div class="container">
+      <h2>一緒に甘いものを作りましょう</h2>
+      <p class="section-subtitle">プロジェクトのアイデアがありますか？一緒においしいものを作りましょう！</p>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-berry" style="top: -2rem; right: 1rem;">🍓</div>
+          <div class="contact-berry" style="bottom: 1rem; left: 2rem;">🫐</div>
+          
+          <h3>お問い合わせ</h3>
+          <p>新しいプロジェクト、創造的なアイデア、またはあなたのビジョンの一部になる機会について、いつでも話し合いを歓迎します。</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>kinshukbhardwaj11@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 9877952404</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>ベンガルール、インド</span>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Medium">
+              <i class="fab fa-medium-m"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form card-hover">
+          <div class="form-berry" style="top: -1.5rem; right: -1.5rem;">🍒</div>
+          <div class="form-berry" style="bottom: -1.5rem; left: -1.5rem;">🧁</div>
+          
+          <h3>メッセージを送る</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">件名</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">メッセージ</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cake-button">
+              <span>メッセージを送信</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer with bakery theme -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-decoration">
+          <span class="footer-berry">🍓</span>
+          <span class="footer-berry">🧁</span>
+          <span class="footer-berry">🍰</span>
+        </div>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-icon">🍰</span>
+            Kinshuk<span>Bhardwaj</span>
+          </div>
+          <p class="footer-tagline">美しいコードと甘いソリューションを作る</p>
+          <div class="footer-nav">
+            <a href="#home">ホーム</a>
+            <a href="#about">プロフィール</a>
+            <a href="#skills">スキル</a>
+            <a href="#projects">プロジェクト</a>
+            <a href="#journey">経歴</a>
+            <a href="#contact">お問い合わせ</a>
+          </div>
+          <p class="copyright">© 2025 Kinshuk Bhardwaj. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Back to Top Button with cupcake icon -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-birthday-cake"></i>
+  </button>
+
+  <!-- Sprinkles Overlay -->
+  <div class="sprinkles-overlay"></div>
+
+  <!-- JS -->
+  <script src="scripts.js"></script>
+</body>
+</html>
