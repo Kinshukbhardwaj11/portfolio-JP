@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Start auto-scroll by default
-  startAutoScroll();
+ //  startAutoScroll();
   
   // Pause auto-scroll when user interacts with carousel
   projectCarousel.addEventListener('mouseenter', stopAutoScroll);
